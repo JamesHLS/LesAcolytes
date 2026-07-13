@@ -1,0 +1,26 @@
+ensemble_name: "Les Acolytes"
+tagline: "French Baroque cantatas & chamber music"
+hero_image: "/images/placeholders/hero.svg"
+about_heading: "About the ensemble"
+about_text: |
+  Les Acolytes is a Cambridge-based ensemble bringing French Baroque music
+  to life through historically-informed performance. [Placeholder bio —
+  replace with a couple of paragraphs about how the group formed, who's in
+  it, and what kind of programmes you perform.]
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+  fringilla, arcu at cursus congue, sapien odio malesuada felis, in
+  fermentum turpis nulla eget est.
+about_image: "/images/placeholders/about.svg"
+members:
+  - name: "Member Name"
+    role: "Voice / Instrument"
+  - name: "Member Name"
+    role: "Voice / Instrument"
+  - name: "Member Name"
+    role: "Voice / Instrument"
+  - name: "Member Name"
+    role: "Voice / Instrument"
+contact_email: "hello@lesacolytes.example"
+instagram_url: "https://www.instagram.com/lesacolytesmusic/"
+booking_note: "For bookings and enquiries, get in touch by email or Instagram — we'd love to hear from you."

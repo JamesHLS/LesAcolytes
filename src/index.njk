@@ -1,0 +1,107 @@
+---
+layout: base.njk
+---
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="#top">{{ settings.ensemble_name }}</a>
+    <ul>
+      <li><a class="nav-link" href="#about">About</a></li>
+      <li><a class="nav-link" href="#events">Events</a></li>
+      <li><a class="nav-link" href="#media">Media</a></li>
+      <li><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="top" class="hero" style="background-image: url('{{ settings.hero_image }}');">
+  <div class="wrap">
+    <h1>{{ settings.ensemble_name }}</h1>
+    <p>{{ settings.tagline }}</p>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <img src="{{ settings.about_image }}" alt="{{ settings.ensemble_name }} group photo">
+    <div class="about-text">
+      <p class="section-heading">{{ settings.about_heading }}</p>
+      <h2 class="section-title">Who we are</h2>
+      {{ settings.about_text | safe }}
+      <ul class="members">
+        {% for member in settings.members %}
+        <li>
+          {{ member.name }}
+          <span class="role">{{ member.role }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="events">
+  <div class="wrap">
+    <p class="section-heading">What's on</p>
+    <h2 class="section-title">Upcoming events</h2>
+    <ul class="event-list">
+      {% for event in collections.events %}
+      <li class="event">
+        <span class="event-date">{{ event.data.display_date }}</span>
+        <div>
+          <h3 class="event-title">{{ event.data.title }}</h3>
+          <p class="event-venue">{{ event.data.venue }}</p>
+        </div>
+        <a class="event-link" href="{{ event.data.ticket_url }}" target="_blank" rel="noopener">Details</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="media">
+  <div class="wrap">
+    <p class="section-heading">Watch & listen</p>
+    <h2 class="section-title">Media</h2>
+    <div class="video-grid">
+      {% for video in media.videos %}
+      <div>
+        <div class="video-frame">
+          {% if video.youtube_id %}
+          <iframe src="https://www.youtube.com/embed/{{ video.youtube_id }}" title="{{ video.title }}" allowfullscreen></iframe>
+          {% else %}
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#888;font-size:0.9rem;text-align:center;padding:1rem;">
+            Video coming soon
+          </div>
+          {% endif %}
+        </div>
+        <p class="event-venue">{{ video.title }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="gallery">
+      {% for photo in media.photos %}
+      <img src="{{ photo.src }}" alt="{{ photo.alt }}">
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="section-heading">Get in touch</p>
+      <h2 class="section-title">Contact & bookings</h2>
+      <p class="contact-note">{{ settings.booking_note }}</p>
+    </div>
+    <ul class="contact-links">
+      <li><a href="mailto:{{ settings.contact_email }}">{{ settings.contact_email }}</a></li>
+      <li><a href="{{ settings.instagram_url }}" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    &copy; {{ currentYear }} {{ settings.ensemble_name }}
+  </div>
+</footer>

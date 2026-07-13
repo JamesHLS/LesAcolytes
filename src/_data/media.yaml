@@ -1,0 +1,14 @@
+videos:
+  - title: "Performance placeholder — replace with a YouTube link"
+    youtube_id: ""
+  - title: "Performance placeholder — replace with a YouTube link"
+    youtube_id: ""
+photos:
+  - src: "/images/placeholders/gallery-1.svg"
+    alt: "Concert photo placeholder 1"
+  - src: "/images/placeholders/gallery-2.svg"
+    alt: "Concert photo placeholder 2"
+  - src: "/images/placeholders/gallery-3.svg"
+    alt: "Concert photo placeholder 3"
+  - src: "/images/placeholders/gallery-4.svg"
+    alt: "Concert photo placeholder 4"

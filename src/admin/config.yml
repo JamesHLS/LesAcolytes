@@ -1,0 +1,67 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+
+site_url: https://lesacolytesmusic.netlify.app
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "general"
+        label: "General"
+        file: "src/_data/settings.yaml"
+        fields:
+          - { label: "Ensemble Name", name: "ensemble_name", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Hero Photo", name: "hero_image", widget: "image" }
+          - { label: "About Heading (small label)", name: "about_heading", widget: "string" }
+          - { label: "About Text", name: "about_text", widget: "text" }
+          - { label: "About Photo", name: "about_image", widget: "image" }
+          - label: "Members"
+            name: "members"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role / Instrument", name: "role", widget: "string" }
+          - { label: "Contact Email", name: "contact_email", widget: "string" }
+          - { label: "Instagram URL", name: "instagram_url", widget: "string" }
+          - { label: "Booking Note", name: "booking_note", widget: "text" }
+
+  - name: "events"
+    label: "Events"
+    folder: "src/content/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Publish", name: "permalink", widget: "hidden", default: false }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date (for sorting)", name: "date", widget: "date", format: "YYYY-MM-DD" }
+      - { label: "Date (as displayed)", name: "display_date", widget: "string", hint: "e.g. 12 September 2026" }
+      - { label: "Venue", name: "venue", widget: "string" }
+      - { label: "Ticket / Info Link", name: "ticket_url", widget: "string" }
+      - { label: "Event Image", name: "image", widget: "image", required: false }
+      - { label: "Description", name: "body", widget: "markdown" }
+
+  - name: "media"
+    label: "Media"
+    files:
+      - name: "media"
+        label: "Videos & Photos"
+        file: "src/_data/media.yaml"
+        fields:
+          - label: "Videos"
+            name: "videos"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "YouTube Video ID", name: "youtube_id", widget: "string", hint: "The part after 'watch?v=' in the YouTube URL", required: false }
+          - label: "Photos"
+            name: "photos"
+            widget: "list"
+            fields:
+              - { label: "Photo", name: "src", widget: "image" }
+              - { label: "Description", name: "alt", widget: "string" }
