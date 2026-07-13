@@ -21,7 +21,7 @@ layout: base.njk
 </header>
 
 <section id="about">
-  <div class="wrap about-grid">
+  <div class="wrap about-grid" data-reveal>
     <img src="{{ settings.about_image }}" alt="{{ settings.ensemble_name }} group photo">
     <div class="about-text">
       <p class="section-heading">{{ settings.about_heading }}</p>
@@ -43,7 +43,7 @@ layout: base.njk
   <div class="wrap">
     <p class="section-heading">What's on</p>
     <h2 class="section-title">Upcoming events</h2>
-    <ul class="event-list">
+    <ul class="event-list" data-reveal="stagger">
       {% for event in collections.events %}
       <li class="event">
         <span class="event-date">{{ event.data.display_date }}</span>
@@ -62,7 +62,7 @@ layout: base.njk
   <div class="wrap">
     <p class="section-heading">Watch & listen</p>
     <h2 class="section-title">Media</h2>
-    <div class="video-grid">
+    <div class="video-grid" data-reveal="stagger">
       {% for video in media.videos %}
       <div>
         <div class="video-frame">
@@ -78,7 +78,7 @@ layout: base.njk
       </div>
       {% endfor %}
     </div>
-    <div class="gallery">
+    <div class="gallery" data-reveal="stagger">
       {% for photo in media.photos %}
       <img src="{{ photo.src }}" alt="{{ photo.alt }}">
       {% endfor %}
@@ -87,7 +87,7 @@ layout: base.njk
 </section>
 
 <section id="contact">
-  <div class="wrap contact-grid">
+  <div class="wrap contact-grid" data-reveal>
     <div>
       <p class="section-heading">Get in touch</p>
       <h2 class="section-title">Contact & bookings</h2>
