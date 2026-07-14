@@ -40,4 +40,4 @@ Opens the site at `http://localhost:8080`. The admin panel at `/admin` won't wor
 - `src/content/events/*.md` — one file per concert/event
 - `src/_data/media.yaml` — YouTube videos + photo gallery
 - `src/images/uploads/` — where photos uploaded via the CMS land
-- `src/images/placeholders/` — placeholder graphics to swap out for real photos
+- `src/images/stock/` — **free stock photos (Pexels) standing in for real ensemble photos.** Free to use, but not photos of Les Acolytes — replace with real performance/portrait photos as soon as you have them, via the CMS.
