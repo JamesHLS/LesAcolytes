@@ -3,24 +3,26 @@ tagline: "French Baroque cantatas & chamber music"
 hero_image: "/images/stock/hero.jpg"
 about_heading: "About the ensemble"
 about_text: |
-  Les Acolytes is a Cambridge-based ensemble bringing French Baroque music
-  to life through historically-informed performance. [Placeholder bio —
-  replace with a couple of paragraphs about how the group formed, who's in
-  it, and what kind of programmes you perform.]
+  Les Acolytes is a specialist early-music ensemble showcasing the talents
+  of young early-music professionals, performing French repertoire of the
+  seventeenth and eighteenth centuries — from cantatas by Clérambault and
+  Montéclair to instrumental works by Couperin and Francoeur.
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-  fringilla, arcu at cursus congue, sapien odio malesuada felis, in
-  fermentum turpis nulla eget est.
+  Founded at Girton College, Cambridge, by harpsichordist and continuo
+  player Edward Campbell-Rowntree, the ensemble brings together
+  historically-informed performance with the energy of a new generation of
+  period-instrument specialists. [Placeholder — expand with more on the
+  group's formation, upcoming plans, and recording projects.]
 about_image: "/images/stock/about.jpg"
 members:
-  - name: "Member Name"
-    role: "Voice / Instrument"
-  - name: "Member Name"
-    role: "Voice / Instrument"
-  - name: "Member Name"
-    role: "Voice / Instrument"
-  - name: "Member Name"
-    role: "Voice / Instrument"
+  - name: "Andrew Taheny"
+    role: "Violin"
+  - name: "Billy Hui"
+    role: "Flute"
+  - name: "Timothy Lin"
+    role: "Viola da Gamba"
+  - name: "Edward Campbell-Rowntree"
+    role: "Harpsichord — Founder"
 contact_email: "hello@lesacolytes.example"
 instagram_url: "https://www.instagram.com/lesacolytesmusic/"
 booking_note: "For bookings and enquiries, get in touch by email or Instagram — we'd love to hear from you."
