@@ -1,10 +1,12 @@
 :root {
-  --ink: #1a1a1a;
-  --paper: #faf9f6;
-  --line: #e4e1d8;
-  --muted: #6b675e;
-  --accent: #a8321f;
+  --ink: #2b1d14;
+  --paper: #f3ead9;
+  --line: #ddc9ab;
+  --muted: #7d6a52;
+  --accent: #7a2e1d;
   --max-width: 1080px;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Source Serif 4", Georgia, serif;
 }
 
 * { box-sizing: border-box; }
@@ -13,11 +15,18 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-body);
   color: var(--ink);
   background: var(--paper);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3,
+.brand,
+.event-date,
+.section-heading {
+  font-family: var(--font-display);
 }
 
 img { max-width: 100%; display: block; }
