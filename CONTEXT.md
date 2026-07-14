@@ -25,6 +25,8 @@ Reference links:
 
 Site scaffolded and building locally (`npm start`), concert-hall brown/mahogany palette with Playfair Display + Source Serif 4 typography, scroll-fade reveal effect, and free stock photos (Pexels) standing in for real ensemble photos. **Not yet deployed.** Repo is local-only git (no remote configured yet).
 
+Real content now in place for: media (2 real Marin Marais performance videos embedded, one is an actual Les Acolytes recording — YouTube ID `KMH-7NeWgVA`), member lineup (Andrew Taheny - violin, Billy Hui - flute, Timothy Lin - viola da gamba, Edward Campbell-Rowntree - harpsichord/founder), about-section bio, and the Cambridge event's programme details (Couperin, Clérambault, Francoeur, Montéclair) — all sourced from the CMP Cambridge event listing and web search. Photos are still stock/placeholder.
+
 ## Next steps
 
 All detailed in `README.md` at the repo root:
