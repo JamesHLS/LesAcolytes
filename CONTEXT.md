@@ -17,13 +17,13 @@ Reference links:
 - `src/_data/settings.yaml` — global content (ensemble name, tagline, bio, member list, hero/about images, contact email, Instagram URL) — edited via Decap's "Site Settings" file collection.
 - `src/content/events/*.md` — one markdown file per concert (title, date, venue, ticket link, image, description) — edited via Decap's "Events" folder collection. Seeded with the real Cambridge cantatas event plus one placeholder event.
 - `src/_data/media.yaml` — YouTube video IDs + gallery photo list — edited via Decap's "Media" file collection.
-- `src/images/uploads/` — where photos uploaded through the CMS land; `src/images/placeholders/` has SVG placeholder graphics to swap out.
+- `src/images/uploads/` — where photos uploaded through the CMS land; `src/images/stock/` has free Pexels stock photos (chamber music/baroque instruments) standing in for real ensemble photos — swap for real photos via the CMS when available.
 - `src/js/reveal.js` — IntersectionObserver scroll-fade-in effect (staggered for lists/grids), respects `prefers-reduced-motion`.
 - Single scrolling page (`src/index.njk`): Hero → About → Events → Media → Contact, modern-minimal design (warm off-white background, one red accent, sans-serif).
 
-## Status as of 2026-07-13
+## Status as of 2026-07-14
 
-Site scaffolded and building locally (`npm start`), all placeholder content in place, initial commits made. **Not yet deployed.** Repo is local-only git (no remote configured yet).
+Site scaffolded and building locally (`npm start`), concert-hall brown/mahogany palette with Playfair Display + Source Serif 4 typography, scroll-fade reveal effect, and free stock photos (Pexels) standing in for real ensemble photos. **Not yet deployed.** Repo is local-only git (no remote configured yet).
 
 ## Next steps
 
