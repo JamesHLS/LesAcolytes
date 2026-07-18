@@ -13,8 +13,10 @@ layout: base.njk
   </div>
 </nav>
 
-<header id="top" class="hero" style="background-image: url('{{ settings.hero_image }}');">
-  <div class="wrap">
+<header id="top" class="hero">
+  <div class="hero-image hero-image-left" style="--hero-img: url('{{ settings.hero_image }}');"></div>
+  <div class="hero-image hero-image-right" style="--hero-img: url('{{ settings.hero_image }}');"></div>
+  <div class="wrap hero-text">
     <h1>{{ settings.ensemble_name }}</h1>
     <p>{{ settings.tagline }}</p>
   </div>
