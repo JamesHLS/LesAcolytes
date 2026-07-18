@@ -80,6 +80,7 @@ a { color: inherit; }
 
 /* Hero */
 .hero {
+  will-change: opacity, transform;
   position: relative;
   min-height: 78vh;
   display: flex;
