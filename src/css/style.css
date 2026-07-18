@@ -93,11 +93,18 @@ a { color: inherit; }
   background-image: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.65) 100%), var(--hero-img);
   background-size: cover;
   background-position: center;
-  will-change: transform, opacity, filter;
-  transition: transform 0.2s ease-out, opacity 0.2s ease-out, filter 0.2s ease-out;
+  will-change: transform, filter;
+  transition: transform 0.2s ease-out, filter 0.2s ease-out;
 }
-.hero-image-left { clip-path: inset(0 50% 0 0); }
-.hero-image-right { clip-path: inset(0 0 0 50%); }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--paper);
+  opacity: 0;
+  will-change: opacity, transform;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  pointer-events: none;
+}
 .hero-text {
   position: relative;
   padding-bottom: 4rem;

@@ -1,9 +1,9 @@
 (function () {
-  var left = document.querySelector(".hero-image-left");
-  var right = document.querySelector(".hero-image-right");
+  var image = document.querySelector(".hero-image");
+  var overlay = document.querySelector(".hero-overlay");
   var text = document.querySelector(".hero-text");
   var hero = document.querySelector(".hero");
-  if (!left || !right || !text || !hero) return;
+  if (!image || !overlay || !text || !hero) return;
 
   var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (prefersReducedMotion) return;
@@ -19,17 +19,11 @@
     var linear = Math.min(Math.max(window.scrollY / fadeDistance, 0), 1);
     var eased = easeOutCubic(linear);
 
-    var driftVw = eased * 5; // small horizontal drift, not a full slide
-    var scale = 1 + eased * 0.06;
-    var blur = eased * 6;
+    image.style.transform = "scale(" + (1 + eased * 0.06) + ")";
+    image.style.filter = "blur(" + eased * 4 + "px)";
 
-    left.style.transform = "translateX(-" + driftVw + "vw) scale(" + scale + ")";
-    left.style.opacity = String(1 - eased);
-    left.style.filter = "blur(" + blur + "px)";
-
-    right.style.transform = "translateX(" + driftVw + "vw) scale(" + scale + ")";
-    right.style.opacity = String(1 - eased);
-    right.style.filter = "blur(" + blur + "px)";
+    overlay.style.opacity = String(eased);
+    overlay.style.transform = "translateY(" + (1 - eased) * 4 + "%)";
 
     text.style.opacity = String(1 - eased);
     text.style.transform = "translateY(" + eased * -16 + "px)";
